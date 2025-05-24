@@ -41,11 +41,11 @@ appServer.use(authMiddleware);
 
 appServer.use("/", router);
 
-appServer.use(errorHandler);
-
 appServer.all("*", (req, res) => {
     res.status(404).json({ message: "Sorry! Resource not found" });
 });
+
+appServer.use(errorHandler);
 
 initDB()
     .then(() => {

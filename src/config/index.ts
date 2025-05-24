@@ -10,7 +10,5 @@ export const envs = {
     DB_NAME: get("DB_NAME").default("dev").asString(),
     DB_HOST: get("DB_HOST").default("dev").asString(),
     DB_DIALECT: get("DB_DIALECT").default("dev").asString(),
-    RESULT_API: get("RESULT_API").asString(),
-    TRANSACTION_API: get("TRANSACTION_API").asString(),
     AUTH_TOKEN: get("AUTH_TOKEN").asString(),
 };

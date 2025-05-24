@@ -1,5 +1,10 @@
 import { envs } from "../config";
 import { Sequelize } from "sequelize-typescript";
+import { DiscountModel } from "./models/discounts.model";
+import { OrderDiscountsModel } from "./models/order_discounts.model";
+import { OrderLineItemModel } from "./models/order_line_items.model";
+import { OrderModel } from "./models/order.model";
+import { ProductModel } from "./models/product.model";
 
 const { DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DB_USERNAME, NODE_ENV } = envs;
 
@@ -15,6 +20,7 @@ const sequelize = new Sequelize(
             charset: "utf8mb4",
             collate: "utf8mb4_general_ci",
             freezeTableName: true,
+            underscored: true,
         },
         pool: {
             min: 0,
@@ -23,7 +29,13 @@ const sequelize = new Sequelize(
         logging: console.log,
         logQueryParameters: NODE_ENV === "prod",
         benchmark: true,
-        models: [],
+        models: [
+            DiscountModel,
+            OrderDiscountsModel,
+            OrderLineItemModel,
+            OrderModel,
+            ProductModel,
+        ],
     },
 );
 
