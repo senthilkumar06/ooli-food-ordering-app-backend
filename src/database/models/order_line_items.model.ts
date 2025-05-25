@@ -28,9 +28,6 @@ export class OrderLineItemModel extends Model {
     @Column(DataType.BIGINT)
     productId: number;
 
-    @Column(DataType.DECIMAL(12, 2))
-    subtotalPrice: number;
-
     @Column(DataType.INTEGER)
     quantity: number;
 

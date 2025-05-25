@@ -6,7 +6,7 @@ import kartRouter from "./modules/kart/kart.routes";
 const router = Router();
 
 router.use("/products", productRouter);
-router.use("/order", orderRouter);
+router.use("/orders", orderRouter);
 router.use("/kart", kartRouter);
 
 export default router;

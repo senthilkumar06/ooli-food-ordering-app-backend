@@ -39,6 +39,7 @@ module.exports = {
             fulfilled_at: Sequelize.DATE,
             closed_at: Sequelize.DATE,
             total_price: Sequelize.DECIMAL(12, 2),
+            updated_at: Sequelize.DATE,
         });
 
         await queryInterface.addIndex("food_kart_orders", ["created_at"], {

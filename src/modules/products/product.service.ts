@@ -79,7 +79,7 @@ export const listProductsService = async (
         return { products, newNextToken };
     } catch (error) {
         console.error("Error fetching products:", error);
-        new CustomError(error.message, 500);
+        throw new CustomError(error.message, 500);
     }
 };
 

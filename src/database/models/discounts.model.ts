@@ -18,8 +18,8 @@ import {
 export class DiscountModel extends Model {
     @PrimaryKey
     @AutoIncrement
-    @Column(DataType.UUIDV4)
-    declare id: string;
+    @Column(DataType.BIGINT)
+    declare id: number;
 
     @Column(DataType.STRING)
     code: string;

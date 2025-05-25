@@ -11,6 +11,7 @@ export enum EOrderStatus {
     confirmed,
     fulfilled,
     closed,
+    cancelled,
 }
 
 export enum EValueType {
